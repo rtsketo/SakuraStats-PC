@@ -16,10 +16,25 @@ Example: java -jar SakuraStats.jar 2YCJRUC 209LRG2P
 
 ## Files
 
-site: Example site
+site: Example site.
 
-bin: The application compiled
 
-src: Application's source code
+src: Application's source code.
 
-lib: Libraries, the whole folder needs to be in application's root folder.
+bin: Compiled. The files need to be in application's root folder.
+
+lib: Depedencies. The whole folder needs to be in application's root folder.
+
+
+
+
+File structure example:
+
+root
+-- lib
+---- jsoup-1.11.2.jar
+---- commons-io-2.6.jar
+---- sqlite-jdbc-3.20.0.jar
+---- univocity-parsers-2.5.9.jar
+-- SakuraStats.jar
+-- SakuraStats.bat
