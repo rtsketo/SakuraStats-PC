@@ -1,0 +1,260 @@
+    <style> .mark {
+        animation: blink 2s;
+        background-color: inherit;
+    }
+    @keyframes blink {
+        0% {
+            background-color: azure;
+            opacity: 0;
+        }
+        25% {
+            background-color: #d9edf7;
+            opacity: 100%;
+        }
+        100% {
+            background-color: inherit;
+        }
+    }
+    @media all and (min-width: 960px) {
+        .clanlogo {
+            max-height: 30px;
+        }
+        .whatnow {
+            font-size: 18px;
+        }
+        th {
+            font-size: 20px;
+        }
+        td {
+            font-size: 1.2em;
+        }
+        .clana {
+            font-size: 28px;
+        }
+    }
+    @media all and (max-width: 959px) and (min-width: 50px) {
+        .clanlogo {
+            max-height: 1em;
+        }
+        .whatnow {
+            font-size: .6em;
+        }
+        th {
+            font-size: .7em;
+        }
+        td {
+            font-size: .7em;
+        }
+        .clana {
+            font-size: 1em;
+        }
+    }
+    .clanlogo {
+        vertical-align: middle;
+    }
+    th {
+        vertical-align: middle;
+        text-decoration-style: wavy;
+        font-variant: small-caps;
+        font-weight: bold;
+    }
+    td {
+        vertical-align: middle;
+        text-decoration-style: wavy;
+        font-variant: small-caps;
+        font-weight: bold;
+        padding-right: 5px;
+    }
+    .logo {
+/*        display: inline-block;*/
+        max-height: 50px;
+        background-image: url(nav.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: auto 50px;
+    }
+    .navbar {
+        background-color: black;
+    }
+    .clana {
+        line-height: 50px;
+        display: inline-block;
+        vertical-align: middle;
+        font-variant: small-caps;
+        font-weight: 900;
+        color: aliceblue;
+    }
+    .row {
+        margin: 0;
+    }
+    .clana,
+    .switch,
+    .golem,
+    .container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    @charset "UTF-8";
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+    body {
+        color: #A7A1AE;
+        background-color: #1F2739;
+    }
+    h1 {
+        font-size: .7em;
+        font-weight: 300;
+        color: #4DC3FA;
+    }
+    h2 {
+        font-size: 1em;
+        font-weight: 300;
+        text-align: center;
+        display: block;
+        line-height: 1em;
+        padding-bottom: 2em;
+        color: #FB667A;
+    }
+    h2 a {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #FB667A;
+        text-decoration: none;
+    }
+    .container tr:nth-child(even) {
+        background-color: #2C3446;
+    }
+    .container th {
+        background-color: #1F2739;
+    }
+    .container td:first-child {
+        color: #f7afa9;
+    }
+    .container tr:nth-child(even) > td:first-child {
+        color: beige;
+    }
+    .container tr:hover {
+        background-color: #464A52;
+        -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+        -moz-box-shadow: 0 6px 6px -6px #0E1119;
+        box-shadow: 0 6px 6px -6px #0E1119;
+    }
+    @media (max-width: 600px) {
+        .container td:nth-child(2),
+        .container th:nth-child(2) {
+            display: none;
+        }
+    }
+    table {
+        color: beige;
+        /*            text-shadow: 0px 0px 4px rgba(0, 20, 255, 1), 0px 0px 4px rgba(0, 20, 255, 1);*/
+        text-align: justify;
+        /*            margin: 0 auto;*/
+        /*            border-spacing: 10px;*/
+        /*            border-collapse: separate;*/
+        padding: 0;
+        padding-bottom: 3%;
+    }
+    table > tbody > tr > th {
+        font-weight: 800;
+    }
+    table > thead > tr > th,
+    table > tbody > tr > td,
+    table > tbody > tr > th {
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+    /*
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            line-height: 1.42em;
+            color: #A7A1AE;
+        }
+*/
+    
+    td {
+        padding-bottom: 1%;
+        padding-top: 1%;
+        font-weight: normal;
+        -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+        -moz-box-shadow: 0 2px 2px -2px #0E1119;
+        box-shadow: 0 2px 2px -2px #0E1119;
+    }
+    span {
+        font-size: .7em;
+        color: darkgray;
+    }
+    /*
+        table {
+            overflow: hidden;
+            width: 80%;
+            margin: 0 auto;
+            display: table;
+        }
+*/
+    /*
+        td,
+        th {
+            padding-bottom: 2%;
+            padding-top: 2%;
+            padding-left: 2%;
+        }
+*/
+    
+    tr:nth-child(odd) {
+        background-color: #323C50;
+    }
+    tr:nth-child(even) {
+        background-color: #2C3446;
+    }
+    th {
+        background-color: #1F2739;
+    }
+    td:first-child {
+        color: #FB667A;
+    }
+    tr:hover,
+    tr:first-child > th:hover {
+        font-weight: 900;
+        color: azure;
+        text-shadow: -1px -1px 10px rgba(0, 20, 255, .5), 1px -1px 10px rgba(0, 20, 255, .5), -1px 1px 10px rgba(0, 20, 255, .5), 1px 1px 10px rgba(0, 20, 255, .5), 0px 0px 10px white;
+        transition-delay: 0s;
+        transition-duration: 0.4s;
+        transition-property: all;
+        transition-timing-function: line;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        transform: translate3d(-1px, -1px, 0);
+        cursor: default;
+    }
+    thead > tr:first-child:hover {
+        transition: none;
+        transform: none;
+        text-shadow: none;
+    }
+    tr:first-child > th:hover {
+        transform: none;
+    }
+    hey {
+        color: #FB667A;
+    }
+    ooy {
+        color: #f7afa9;
+    }
+    hoy {
+        color: #f5d2c0;
+    }
+    .table-condensed {
+        border: none;
+    }
+    .table-responsive {
+        border: none;
+    }
+    tr.deleted * {
+        color: gray !important;
+    }
+    </style>
