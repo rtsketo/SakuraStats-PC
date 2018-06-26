@@ -16,11 +16,10 @@ Example: java -jar SakuraStats.jar 2YCJRUC 209LRG2P
 
 ## Files
 
-site: Example site.<br>
 src: Application's source code.<br>
-bin: Compiled. The files need to be in application's root folder.<br>
-lib: Depedencies. The whole folder needs to be in application's root folder.<br>
-
+bin: Compiled JAR. The files need to be in application's root folder.<br>
+lib: Dependencies. The whole folder needs to be in application's root folder.<br>
+site: Example site.<br>
 
 
 
