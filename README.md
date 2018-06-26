@@ -28,9 +28,9 @@ lib: Depedencies. The whole folder needs to be in application's root folder.
 
 
 
-File structure example:
+### File structure example:
 
-root
+root<br>
 -- lib
 ---- jsoup-1.11.2.jar
 ---- commons-io-2.6.jar
