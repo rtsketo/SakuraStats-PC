@@ -34,9 +34,9 @@ bin<br>
 -- lib<br>
 ----- jsoup-1.11.2.jar<br>
 ----- commons-io-2.6.jar<br>
------ sqlite-jdbc-3.20.0.jar<br>
 ----- commons-text-1.2.jar<br>
 ----- commons-lang3-3.7.jar<br>
 ----- univocity-parsers-2.5.9.jar<br>
+----- sqlite-jdbc-3.20.0.jar<br>
 -- SakuraStats.jar<br>
 -- SakuraStats.bat<br>
