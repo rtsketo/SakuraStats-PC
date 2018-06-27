@@ -28,7 +28,7 @@ site: Example site.<br>
 
 
 
-### File structur:
+### File structure:
 
 bin<br>
 -- lib<br>
