@@ -37,6 +37,6 @@ bin<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;|-- commons-text-1.2.jar<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;|-- commons-lang3-3.7.jar<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;|-- univocity-parsers-2.5.9.jar<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;`-- sqlite-jdbc-3.20.0.jar<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;\`-- sqlite-jdbc-3.20.0.jar<br>
 |-- SakuraStats.jar<br>
-`-- SakuraStats.bat<br>
+\`-- SakuraStats.bat<br>
