@@ -12,7 +12,7 @@ http://rtsketo.duckdns.org
 
 2) Run the app with this command, adding your clans' hashtags:
 
-        java -jar SakuraStats.jar \<clantag1\> \<clantag2\> ...
+        java -jar SakuraStats.jar <clantag1> <clantag2> ... <clantagN>
 
   *Example*: java -jar SakuraStats.jar 2YCJRUC 209LRG2P
 
