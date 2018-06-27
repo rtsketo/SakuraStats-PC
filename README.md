@@ -10,7 +10,7 @@ http://rtsketo.duckdns.org
 ##### To avoid missing a war, the app should run at least once every 18 days.
 1) Make sure the files are in the proper directory (see below).
 
-2) Run the app with this command, adding your clans' hashtags:
+2) Run the app using this command, adding your clans' hashtags:
 
         java -jar SakuraStats.jar <clantag1> <clantag2> ... <clantagN>
 
