@@ -7,7 +7,7 @@ http://rtsketo.duckdns.org
 
 
 ## Usage
-##### To avoid missing a war, the app should run at least once in 18 days.
+##### To avoid missing a war, the app should run at least once every 18 days.
 1) Make sure the files are in the proper directory (see below).
 
 2) Run the app with this command, adding your clans' hashtags:
