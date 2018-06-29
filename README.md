@@ -7,10 +7,15 @@ http://rtsketo.duckdns.org
 
 
 ## Usage
+##### To avoid missing a war, the app should run at least once every 18 days.
+1) Make sure the files are in the proper directory (see below).
 
-java -jar SakuraStats.jar \<clantag1\> \<clantag2\> ...
+2) Run the app using this command, adding your clans' hashtags:
 
-Example: java -jar SakuraStats.jar 2YCJRUC 209LRG2P
+        java -jar SakuraStats.jar <clantag1> <clantag2> ... <clantagN>
+
+  *Example*: java -jar SakuraStats.jar 2YCJRUC 209LRG2P
+
 
 
 
@@ -23,15 +28,14 @@ site: Example site.<br>
 
 
 
-### File structure example:
-
-root<br>
--- lib<br>
--- -- jsoup-1.11.2.jar<br>
--- -- commons-io-2.6.jar<br>
--- -- commons-text-1.2.jar<br>
--- -- commons-lang3-3.7.jar<br>
--- -- sqlite-jdbc-3.20.0.jar<br>
--- -- univocity-parsers-2.5.9.jar<br>
--- SakuraStats.jar<br>
--- SakuraStats.bat<br>
+#### File structure:
+bin<br>
+|-- lib<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;|-- jsoup-1.11.2.jar<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;|-- commons-io-2.6.jar<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;|-- commons-text-1.2.jar<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;|-- commons-lang3-3.7.jar<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;|-- univocity-parsers-2.5.9.jar<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;\`-- sqlite-jdbc-3.20.0.jar<br>
+|-- SakuraStats.jar<br>
+\`-- SakuraStats.bat<br>
