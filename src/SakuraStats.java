@@ -205,7 +205,7 @@ public class SakuraStats {
         List<int[]> pwars = new ArrayList();
         for (String[] war : analytics)
             if (!war[0].equals("name")) {
-                for (int w = 0; w < 9; w++)
+                for (int w = 0; w < (war.length-5)/4; w++)
                     if(war[4*w+5] != null &&
                             !wardays.contains(war[4*w+5]))
                         pwars.add(new int[] {
@@ -219,8 +219,9 @@ public class SakuraStats {
         String[] warday = new String[9];
         for (String[] war : analytics)
             if (!war[0].equals("name"))
-                for (int w = 0; w < warday.length; w++)
-                    if(war[4*w+5] != null)
+                for (int w = 0; w < 9; w++)
+                    if(w < (war.length-5)/4 
+                            && war[4*w+5] != null)
                         warday[w] = war[4*w+5];
         
         res = query.executeQuery("SELECT MAX(dona),"
