@@ -364,7 +364,7 @@ public class SakuraStats {
                             "UPDATE player SET name = ?,dona = "+dona+",rece = "
                             +rece+",troph = "+troph+",contr = "+contr+",role = "
                             +role+",vip = "+vip+",wins = "+wins+",wars = "+wars+
-                            ",card = "+card+",times = "+times+
+                            ",card = "+card+",times = "+times+",miss = "+miss+
                             ",isin = 1 WHERE tag IS '"+tag+"'");
                     stmt.setString(1, StringEscapeUtils.escapeJava(name));
                     stmt.executeUpdate();
