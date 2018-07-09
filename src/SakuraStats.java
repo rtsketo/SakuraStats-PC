@@ -48,7 +48,7 @@ public class SakuraStats {
         query = conn.createStatement();
         
         query.execute("PRAGMA main.cache_size = -100000");
-        query.execute("PRAGMA locking_mode = EXCLUSIVE");
+//      query.execute("PRAGMA locking_mode = EXCLUSIVE");
         query.execute("PRAGMA journal_mode = MEMORY");
         query.execute("PRAGMA synchronous = OFF");
         
@@ -342,14 +342,14 @@ public class SakuraStats {
                     
                     double winR = (double)wins/(wars + pos);                    
                     double vip = 
-                            .32 * (winR-minWinR)/maxWinR +
-                            .18 * (wars-minWars)/maxWars +
-                            .04 * (dona-minDona)/maxDona +
-                            .04 * (rece-minRece)/maxRece +
-                            .08 * (troph-minTroph)/maxTroph +
-                            .08 * (contr-minContr)/maxContr +
-                            .18 * (times-minTimes)/maxTimes +                    
-                            .08 * (role-.5)/.4;
+                            .46 * (winR-minWinR)/maxWinR +
+                            .12 * (wars-minWars)/maxWars +
+                            .01 * (dona-minDona)/maxDona +
+                            .01 * (rece-minRece)/maxRece +
+                            .24 * (troph-minTroph)/maxTroph +
+                            .06 * (contr-minContr)/maxContr +
+                            .08 * (times-minTimes)/maxTimes +                    
+                            .02 * (role-.5)/.4;
                     
                     vip = vip / (1 + miss * .2);
                     
