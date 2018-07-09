@@ -198,36 +198,31 @@ public class SakuraStats {
         
         List<String> wardays = new ArrayList();
         ResultSet res = query.executeQuery("SELECT * FROM wardays");
-        while(res.next())
-            wardays.add(res.getString(1));               
-        
+        while(res.next()) 
+            wardays.add(res.getString(1));   
+
+        String[] warday = new String[(analytics.get(0).length-5)/4];
         Map<String,List<int[]>> pstat = new HashMap();
         List<int[]> pwars = new ArrayList();
         for (String[] war : analytics)
             if (!war[0].equals("name")) {
                 for (int w = 0; w < (war.length-5)/4; w++)
-                    if(war[4*w+5] != null &&
-                            !wardays.contains(war[4*w+5]))
-                        pwars.add(new int[] {
-                            Integer.parseInt(war[4*w+8]),
-                            Integer.parseInt(war[4*w+7]),
-                            Integer.parseInt(war[4*w+6])});
+                    if(war[4*w+5] != null) {
+                        warday[w] = war[4*w+5];
+                        if (!wardays.contains(war[4*w+5]))
+                            pwars.add(new int[] {
+                                Integer.parseInt(war[4*w+8]),
+                                Integer.parseInt(war[4*w+7]),
+                                Integer.parseInt(war[4*w+6])});
+                    }
                 pstat.putIfAbsent("#"+war[1], pwars);
                 pwars = new ArrayList();
             }
-        
-        String[] warday = new String[9];
-        for (String[] war : analytics)
-            if (!war[0].equals("name"))
-                for (int w = 0; w < 9; w++)
-                    if(w < (war.length-5)/4 
-                            && war[4*w+5] != null)
-                        warday[w] = war[4*w+5];
-        
+
         res = query.executeQuery("SELECT MAX(dona),"
                 + " MAX(rece), MAX(troph), MAX(contr), MAX(times),"
                 + " MAX(CAST(wins AS float) / CAST(wars AS float)),"
-                + " MAX(card/wars) FROM player");
+                + " MAX(card/wars), MAX(wars) FROM player");
         
         double maxDona = res.getDouble(1);
         double maxRece = res.getDouble(2);
@@ -236,11 +231,12 @@ public class SakuraStats {
         double maxTimes = res.getInt(5);
         double maxWinR = res.getDouble(6);
         double maxCard = res.getInt(7);
+        double maxWars = res.getInt(8);
         
         res = query.executeQuery("SELECT MIN(dona),"
                 + " MIN(rece), MIN(troph), MIN(contr), MIN(times),"
                 + " MIN(CAST(wins AS float) / CAST(wars AS float)),"
-                + " MIN(card/wars) FROM player");
+                + " MIN(card/wars), MIN(wars) FROM player");
         
         double minDona = res.getDouble(1);
         double minRece = res.getDouble(2);
@@ -249,6 +245,7 @@ public class SakuraStats {
         double minTimes = res.getInt(5);
         double minWinR = res.getDouble(6);
         double minCard = res.getInt(7);
+        double minWars = res.getInt(8);
                 
         double pos = Double.MIN_VALUE;
         maxDona = maxDona - minDona + pos;
@@ -258,6 +255,7 @@ public class SakuraStats {
         maxTimes = maxTimes - minTimes + pos;
         maxWinR = maxWinR - minWinR + pos;
         maxCard = maxCard - minCard + pos;
+        maxWars = maxWars - minWars + pos;
         
         for (String[] record : records) 
             if (!record[0].equals("Rank")) {
@@ -344,13 +342,16 @@ public class SakuraStats {
                     
                     double winR = (double)wins/(wars + pos);                    
                     double vip = 
-                            .70 * (winR-minWinR)/maxWinR +
-                            .02 * (dona-minDona)/maxDona +
-                            .02 * (rece-minRece)/maxRece +
-                            .06 * (troph-minTroph)/maxTroph +
-                            .10 * (contr-minContr)/maxContr +
-                            .05 * (times-minTimes)/maxTimes +                    
-                            .05 * (role-.5)/.4;
+                            .32 * (winR-minWinR)/maxWinR +
+                            .18 * (wars-minWars)/maxWars +
+                            .04 * (dona-minDona)/maxDona +
+                            .04 * (rece-minRece)/maxRece +
+                            .08 * (troph-minTroph)/maxTroph +
+                            .08 * (contr-minContr)/maxContr +
+                            .18 * (times-minTimes)/maxTimes +                    
+                            .08 * (role-.5)/.4;
+                    
+                    vip = vip / (1 + miss * .2);
                     
                     times++;                   
 //                    System.out.println(
