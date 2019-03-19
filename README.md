@@ -1,4 +1,4 @@
-# SakuraStats
+# SakuraStats (PC / old version)
 
 ## Site Example
 
